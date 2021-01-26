@@ -33,7 +33,7 @@ class EmotionDetector:
                     return jsonify(parsed_output)
         except Exception as e:
             print(str(e))
-            return None
+            return "Error during prediction.", 400
 
     def parse_output(self, results):
         facial_emotion_key = "facialEmotions"
